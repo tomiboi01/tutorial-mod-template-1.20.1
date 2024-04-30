@@ -13,10 +13,19 @@ import net.minecraft.util.Identifier;
 
 public class ModItems {
     public static final Item RUBY = registerItem("ruby", new Item(new FabricItemSettings()));
+    public static final Item RUBYPICKAXE = registerItem("ruby_pickaxe", new Item(new FabricItemSettings()));
+
     public static void addItemsToIngredientItemGroup(FabricItemGroupEntries entries)
     {
         entries.add(RUBY);
+
     }
+    public static void addItemsToToolsItemGroup(FabricItemGroupEntries entries)
+    {
+        entries.add(RUBYPICKAXE);
+
+    }
+
     private static Item registerItem(String name, Item item)
     {
         return Registry.register(Registries.ITEM, new Identifier(TutorialMod.MOD_ID, name), item);
@@ -25,5 +34,6 @@ public class ModItems {
     {
         TutorialMod.LOGGER.info("Registering mod items for " + TutorialMod.MOD_ID);
         ItemGroupEvents.modifyEntriesEvent(ItemGroups.INGREDIENTS).register(ModItems::addItemsToIngredientItemGroup);
+        ItemGroupEvents.modifyEntriesEvent(ItemGroups.TOOLS).register(ModItems::addItemsToToolsItemGroup);
     }
 }
