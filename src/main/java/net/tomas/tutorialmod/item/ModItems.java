@@ -13,7 +13,7 @@ import net.minecraft.util.Identifier;
 
 public class ModItems {
     public static final Item RUBY = registerItem("ruby", new Item(new FabricItemSettings()));
-    public static final Item RUBYPICKAXE = registerItem("ruby_pickaxe", new Item(new FabricItemSettings()));
+    public static final Item RUBY_PICKAXE = registerItem("ruby_pickaxe", new Item(new FabricItemSettings()));
 
     public static void addItemsToIngredientItemGroup(FabricItemGroupEntries entries)
     {
@@ -22,7 +22,7 @@ public class ModItems {
     }
     public static void addItemsToToolsItemGroup(FabricItemGroupEntries entries)
     {
-        entries.add(RUBYPICKAXE);
+        entries.add(RUBY_PICKAXE);
 
     }
 
