@@ -1,6 +1,7 @@
 package net.tomas.tutorialmod;
 
 import net.fabricmc.yarn.constants.MiningLevels;
+import net.minecraft.item.Items;
 import net.minecraft.item.ToolMaterial;
 import net.minecraft.item.ToolMaterials;
 import net.minecraft.recipe.Ingredient;
@@ -9,7 +10,8 @@ import net.tomas.tutorialmod.item.ModItems;
 import java.util.function.Supplier;
 
 public enum ModToolMaterial implements ToolMaterial {
-    RUBY(MiningLevels.IRON,400, ToolMaterials.GOLD.getMiningSpeedMultiplier(), 3.5f, 25, () -> Ingredient.ofItems((ModItems.RUBY)));
+    RUBY(MiningLevels.IRON,400, ToolMaterials.GOLD.getMiningSpeedMultiplier(), 3.5f, 25, () -> Ingredient.ofItems((ModItems.RUBY))),
+    BAMBOO(MiningLevels.WOOD, 100,ToolMaterials.WOOD.getMiningSpeedMultiplier(), ToolMaterials.STONE.getAttackDamage(), ToolMaterials.GOLD.getEnchantability(), () -> Ingredient.ofItems(Items.BAMBOO));
 
     private final int miningLevel;
     private final int itemDurability;

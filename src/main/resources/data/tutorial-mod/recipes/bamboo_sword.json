@@ -1,0 +1,21 @@
+{
+  "type": "minecraft:crafting_shaped",
+  "category" : "building",
+  "pattern": [
+    " B ",
+    " B ",
+    " S "
+  ],
+  "key": {
+    "S": {
+      "item": "minecraft:bamboo"
+    },
+    "B": {
+      "item": "minecraft:bamboo_block"
+    }
+  },
+  "result": {
+    "item": "tutorial-mod:bamboo_sword",
+    "count": 1
+  }
+}
